@@ -19,9 +19,9 @@ const SignUp = props => {
   const register = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/auth/register", credentials)
+      .post("https://cors-anywhere.herokuapp.com/https://essentialism-be.herokuapp.com/auth/register", credentials)
       .then(res => {
-        props.history.push("/login");
+        // props.history.push("/login");
       })
       .catch(err => console.log(err));
   };
