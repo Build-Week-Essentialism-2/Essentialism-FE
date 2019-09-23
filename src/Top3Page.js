@@ -38,7 +38,7 @@ return (
     <form className="values-form" onSubmit={submitForm}>
     
       <label className="note" htmlFor="note">My Values</label>
-      <textarea
+      <textarea className="text-box"
         id="value"
         name="body"
         onChange={handleChanges}
