@@ -1,0 +1,22 @@
+
+.jayne-display{
+  display:flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.jayne-buttons{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:1.4rem;
+  color: #E2E8E8;
+  background-color: #1C7980;
+  border: 1px solid black;
+  padding:5px 10px;
+  margin: 10px;
+}
+
+.jayne-buttons:focus{
+  background-color: black;
+}
