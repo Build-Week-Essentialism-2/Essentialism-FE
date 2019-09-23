@@ -4,8 +4,10 @@
 }
 
 .project-title{
+    margin:5vh;
     font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
+    font-size: 2rem;
 }
 
 .project-form{
@@ -28,5 +30,24 @@
     font-size:1.3rem;
     margin: 2vh;
     padding:2vh;
+    width:200px;
+}
+
+.project-list-container{
+    
+}
+
+.project-list{
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #E2E8E8;
+    list-style-type: none;
+    text-align: center;
+    padding:20px;
+    margin: 2vh;
+
+}
+
+li{
+    background-color: #E2E8E8;
 }
 

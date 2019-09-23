@@ -44,21 +44,24 @@ const ActivityForm = ({values, status}) => {
                 />
                 </label>
 
-                <div className="project-list">                
+                <button className="submit-button">Submit </button>
+
+                <div className="project-list-container">                
                 {projects.map(project => (
-                    <ul key={project.id}>
-                        <li>Project 1: {project.project1}</li>
-                        <li>Project 2: {project.project2}</li>
-                        <li>Project 3: {project.project3}</li>
+                    <ul key={project.name} className="project-list">
+                        <li>{project.project1}</li>
+                        <li>{project.project2}</li>
+                        <li>{project.project3}</li>
                         
                         
                     </ul>
                 ))}
                 </div>
-
+                
             </Form>
         
         </div>
+        
         </div>
 
     )
