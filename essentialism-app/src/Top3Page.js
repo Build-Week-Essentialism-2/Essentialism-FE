@@ -1,5 +1,13 @@
-import React from "react"
-import ActivityButton from "./Components/ActivityComponent"
+import React, {useState} from "react"
+import ActivityButton from "./components/ActivityComponent"
+
+const Activities = [
+    {name:"Activity 1"},
+    {name:"Activity 2"},
+    {name:"Activity 3"}
+]
+
+
 
 const Top3 = (props) => {
 
@@ -15,24 +23,32 @@ const Top3 = (props) => {
   };
 
 return (
+<div className= "top3page"> 
+<div className="button-container"> 
+    <ActivityButton name={Activities[0].name} />
+    <ActivityButton name={Activities[1].name} />
+    <ActivityButton name={Activities[2].name} />
 
-    <ActivityButton name="Activity 1" />
-    <ActivityButton name="Activity 2" />
-    <ActivityButton name="Activity 3" />
-    
-    <h3> In a few sentences, describe why the selected values are important to you. Focus on thoughts/feelings, and don't worry about spelling/grammar. </h3>
+</div>
 
-    <form onSubmit={submitForm}>
+    <div className="descript-container">
+    <h3 className="value-descript"> In a few sentences, describe why the selected values are important to you. Focus on thoughts and feelings, don't worry about spelling or grammar. </h3>
+    </div>
+
+    <form className="values-form" onSubmit={submitForm}>
     
-      <label htmlFor="note">My Values</label>
+      <label className="note" htmlFor="note">My Values</label>
       <textarea
         id="value"
         name="body"
         onChange={handleChanges}
         value={note.body}
       />
-      <ActivityButton name="Submit" /> 
+      <button className="submit-button">Submit </button> 
     </form>
+</div>
 )
 
 }
+
+export default Top3

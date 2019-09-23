@@ -1,10 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Top3 from "./Top3Page"
+import './styles/Top3.css'
 
 function App() {
   return (
-    <div> </div>
+    <div>
+    <Top3 />
+    </div>
   );
 }
 

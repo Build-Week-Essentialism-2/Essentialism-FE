@@ -1,13 +1,15 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 
-export default class ActivityButton extends React.Component {
-  render(props) {
+class ActivityButton extends React.Component {
+  render() {
     return (
       <div>
-        <Button className="button">{props.name}</Button>{' '}
+        <Button className="button">{this.props.name}</Button>
                 
       </div>
     );
   }
 }
+
+export default ActivityButton
