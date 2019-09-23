@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react"
 import {withFormik, Form, Field } from "formik"
 import * as Yup from "yup"
-import axios from "axios"
+import {axiosWithAuth} from "../utils/axiosWithAuth"
+import {Link} from "react-router-dom"
 
 const ActivityForm = ({values, status, touched, errors}) => {
     const [projects, setProject] = useState([])
@@ -9,6 +10,7 @@ const ActivityForm = ({values, status, touched, errors}) => {
     useEffect(()=> {
         if (status) {
             setProject([...projects, status])
+            console.log(projects)
         }
     }, [status])
 
@@ -46,8 +48,9 @@ const ActivityForm = ({values, status, touched, errors}) => {
                 />
                 </label>
                 {touched.project3 && errors.project3 && <p className="error">{errors.project3}</p>}
-
+                <Link to="/compare">
                 <button className="submit-button">Submit </button>
+                </Link>
 
                 <div className="project-list-container">                
                 {projects.map(project => (
@@ -89,8 +92,8 @@ const FormikActivityForm= withFormik({
 
     handleSubmit(values, {setStatus, resetForm}) {
         resetForm('');
-        axios
-        .post('https://reqres.in/api/users', values)
+        axiosWithAuth()
+        .post('https://cors-anywhere.herokuapp.com/https://essentialism-be.herokuapp.com/api/tasks')
         .then(res => {
             setStatus(res.data)
             console.log(res.data)
@@ -100,6 +103,5 @@ const FormikActivityForm= withFormik({
 
 
 })(ActivityForm)
-
 
 export default FormikActivityForm
