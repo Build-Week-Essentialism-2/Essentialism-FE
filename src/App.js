@@ -10,6 +10,9 @@ import LandingPage from './components/LandingPage';
 import './styles/ActivityPrompt.css'
 import FormikActivityForm from "./components/ActivityPrompt"
 import NavBar from './components/NavBar';
+import Top20List from './components/Top20List'
+import './styles/Top20.css'
+
 
 
 function App() {
@@ -19,7 +22,7 @@ function App() {
     <Route exact path="/" component={LandingPage}/>  
     <Route path="/login" component={Login} />
     <Route path="/register" component={SignUp} />
-    {/* <Route path="/allvalues" component={Top20List} /> */}
+    <Route path="/allvalues" component={Top20List} />
     <Route path="/listoften" component={ListOfTen} />
     <Route path="/top3" component={Top3} />
     <Route path="/projects" component={FormikActivityForm} />

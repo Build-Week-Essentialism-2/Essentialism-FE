@@ -26,7 +26,27 @@ const Compare = ({values, status}) => {
 
     return (
         <div className="compare-page">
-        
+        <div className="values">
+        {topThree.map(item => (
+                    <ul key={item.name} className="values-list">
+                        <li>{item.value1}</li>
+                        <li>{item.value2}</li>
+                        <li>{item.value3}</li>                        
+                        
+                    </ul>
+                ))}
+        </div>
+        <div className="projects">
+        {status.map(project => (
+                    <ul key={project.name} className="project-list">
+                        <li>{project.project1}</li>
+                        <li>{project.project2}</li>
+                        <li>{project.project3}</li>                        
+                        
+                    </ul>
+                ))}
+
+        </div>
         
         </div>
 

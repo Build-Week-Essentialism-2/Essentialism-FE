@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { top20ActivitiesData } from './Top20ActivitiesData';
+import { top20ActivitiesData } from './top20ActivitiesData';
 
 
 
@@ -32,7 +32,7 @@ function Top20List() {
       <h4>You selected: </h4>
       <div>
         {
-          top10.length
+          top10.length > 0
           ? top10.map((info) => (
             <div key={info}>{info}</div>
           ))
