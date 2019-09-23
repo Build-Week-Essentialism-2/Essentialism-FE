@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 
-const Login = props => {
+const SignUp = props => {
 
   const [credentials, setCredentials] = useState({
     username: "",
+    email: "",
     password: ""
   });
 
@@ -15,25 +16,31 @@ const Login = props => {
     });
   };
 
-  const login = e => {
+  const register = e => {
     e.preventDefault();
     axiosWithAuth()
-      .post("/auth/login", credentials)
+      .post("/auth/register", credentials)
       .then(res => {
-        localStorage.setItem("token", res.data.payload);
-        props.history.push("/home");
+        props.history.push("/login");
       })
       .catch(err => console.log(err));
   };
 
   return (
     <div>
-      <form onSubmit={login}>
+      <form onSubmit={register}>
         Username:
         <input
           type="text"
           name="username"
           value={credentials.username}
+          onChange={handleChange}
+        />
+        E-mail:
+        <input
+          type="text"
+          name="email"
+          value={credentials.email}
           onChange={handleChange}
         />
         Password:
@@ -43,10 +50,10 @@ const Login = props => {
           value={credentials.password}
           onChange={handleChange}
         />
-        <button>Log In</button>
+        <button>Sign Up</button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;
