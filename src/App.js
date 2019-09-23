@@ -6,7 +6,7 @@ import './styles/Top3.css'
 function App() {
   return (
     <div>
-    <Top3 />
+    {/* <Top3 /> */}
     </div>
   );
 }
