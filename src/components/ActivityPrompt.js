@@ -13,11 +13,13 @@ const ActivityForm = ({values, status}) => {
     }, [status])
 
     return (
-        <div> 
+        <div className="project-page">
+        <h3 className="project-title"> Please list some of the projects or activities you are currently involved in.  </h3>
+        <div className="form-container"> 
             <Form className="project-form">
                 <label className="project1"> 
                 Project 1
-                <Field 
+                <Field className="project1-field"
                 type="text"
                 name="project1"
                 placeholder="First Project"
@@ -26,7 +28,7 @@ const ActivityForm = ({values, status}) => {
 
                 <label className="project2"> 
                 Project 2
-                <Field 
+                <Field className="project2-field"
                 type="text"
                 name="project2"
                 placeholder="Second Project"
@@ -35,7 +37,7 @@ const ActivityForm = ({values, status}) => {
 
                 <label className="project3"> 
                 Project 3
-                <Field 
+                <Field className="project3-field"
                 type="text"
                 name="project3"
                 placeholder="Third Project"
@@ -56,6 +58,7 @@ const ActivityForm = ({values, status}) => {
 
             </Form>
         
+        </div>
         </div>
 
     )

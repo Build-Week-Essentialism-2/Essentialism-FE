@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Top3 from "./Top3Page"
 import './styles/Top3.css'
+import './styles/ActivityPrompt.css'
 import FormikActivityForm from "./components/ActivityPrompt"
 
 function App() {
