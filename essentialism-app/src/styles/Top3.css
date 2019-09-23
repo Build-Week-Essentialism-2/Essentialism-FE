@@ -1,0 +1,33 @@
+.button-container{
+    margin:5vh;
+    display:flex;
+    justify-content: space-around;
+}
+
+.button{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:2rem;
+    color: #E2E8E8;
+    background-color: #1C7980;
+    padding:20px 60px;
+}
+
+.descript-container{
+    display:flex;
+    justify-content: center;
+}
+
+.value-descript{
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin:5vh;
+    text-align:center;
+    width:50%;
+}
+
+.values-form{
+    margin:5vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

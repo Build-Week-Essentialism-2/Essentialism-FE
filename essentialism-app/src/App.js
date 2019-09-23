@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
-import ListOfTen from './components/listOfTen'
+import Top3 from "./Top3Page"
+import './styles/Top3.css'
+
 function App() {
   return (
-    <div className="App">
-      <ListOfTen/>
+    <div>
+    <Top3 />
     </div>
   );
 }
