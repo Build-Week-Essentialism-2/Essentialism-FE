@@ -3,7 +3,7 @@ import {withFormik, Form, Field } from "formik"
 import * as Yup from "yup"
 import axios from "axios"
 
-const ActivityForm = ({values, status}) => {
+const ActivityForm = ({values, status, touched, errors}) => {
     const [projects, setProject] = useState([])
 
     useEffect(()=> {
@@ -25,6 +25,7 @@ const ActivityForm = ({values, status}) => {
                 placeholder="First Project"
                 />
                 </label>
+                {touched.project1 && errors.project1 && <p className="error">{errors.project1}</p>}
 
                 <label className="project2"> 
                 Project 2
@@ -34,6 +35,7 @@ const ActivityForm = ({values, status}) => {
                 placeholder="Second Project"
                 />
                 </label>
+                {touched.project2 && errors.project2 && <p className="error">{errors.project2}</p>}
 
                 <label className="project3"> 
                 Project 3
@@ -43,6 +45,7 @@ const ActivityForm = ({values, status}) => {
                 placeholder="Third Project"
                 />
                 </label>
+                {touched.project3 && errors.project3 && <p className="error">{errors.project3}</p>}
 
                 <button className="submit-button">Submit </button>
 
