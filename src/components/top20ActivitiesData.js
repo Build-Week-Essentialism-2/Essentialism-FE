@@ -1,5 +1,3 @@
+import React from 'react';
 
-
-export const top20ActivitiesData = [
-  {id: 1, activity: 'Athletic abilty'}, {id: 2, activity: 'Art & Literature'}, {id: 3, activity: 'Creativity'}, {id: 4, activity: 'Discovering & Inventing'}, {id: 5, activity: 'Making a difference in the world'}, {id: 6, activity: 'Independence'}, {id: 7, activity: 'Kindness' }, {id: 8, activity: 'Generosity'}, {id: 9, activity: 'Spontaneity'}, {id: 10, activity: 'Member of a social group'}, {id: 11, activity: 'Music'}, {id: 12, activity: 'Contributing to my community'}, {id: 13, activity: 'Moral principles'}, {id: 14, activity: 'Nature & the environment'}, {id: 15, activity: 'Friends'}, {id: 16, activity: 'Family'}, {id: 17, activity: 'Sense of humour'}, {id: 18, activity: 'Career success'}, {id: 19, activity: 'Helping others'}, {id: 20, activity: 'Looking after my health'}
-]
+export const top20ActivitiesData = ['Athletic abilty', 'Art & Literature', 'Creativity', 'Discovering & Inventing', 'Making a difference in the world', 'Independence', 'Kindness', 'Generosity', 'Spontaneity', 'Member of a social group', 'Music', 'Contributing to my community', 'Moral principles', 'Nature & the environment', 'Friends', 'Family', 'Sense of humour', 'Career success', 'Helping others', 'Looking after my health']

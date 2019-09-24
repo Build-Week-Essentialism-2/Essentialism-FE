@@ -1,15 +1,18 @@
-import React from 'react';
-import Top20Display from './Top20Display';
+import React, {useState} from 'react';
 import { top20ActivitiesData } from './Top20ActivitiesData';
 
-// const initialTop10 = {
-//   id: '',
-//   activity: '',
-// }
+
 
 function Top20List() {
 
-  // const [top10, setTop10] = useState(initialTop10);
+  const [top10, setTop10] = useState([]);
+
+  const addTop10 = event => {
+    // event.preventDefault();
+    const newEntry = event.target.value;
+    top10.push(newEntry);
+  }
+
 
 
   return (
@@ -21,10 +24,19 @@ function Top20List() {
         {
           top20ActivitiesData.map((info) => (
             <div>
-              <Top20Display key={info.id} info={info}/>
-              {/* <button className="jayne-buttons">{info.activity}</button> */}
+              <button className="jayne-buttons" key={info} value={info} onClick={addTop10}>{info}</button>
             </div>
           ))
+        }
+      </div>
+      <h4>You selected: </h4>
+      <div>
+        {
+          top10.length
+          ? top10.map((info) => (
+            <div key={info}>{info}</div>
+          ))
+          : 'No Activities selected!'
         }
       </div>
     </div>
