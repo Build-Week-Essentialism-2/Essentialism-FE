@@ -22,7 +22,8 @@ const ListOfTen = (props) => {
         })
     })
     const TopTenButton = styled.button`
-        background: lightblue; 
+        background: #445FE8;
+        color: white; 
         border: 0px solid turquoise;
         width: 100px;   
         height: 40px;
