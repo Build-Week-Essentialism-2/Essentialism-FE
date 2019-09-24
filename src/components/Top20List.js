@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Top20Display from './Top20Display';
 import { top20ActivitiesData } from './Top20ActivitiesData';
 
-const initialTop10 = {
-  id: '',
-  activity: '',
-}
+// const initialTop10 = {
+//   id: '',
+//   activity: '',
+// }
 
 function Top20List() {
 
-  const [top10, setTop10] = useState(initialTop10);
+  // const [top10, setTop10] = useState(initialTop10);
 
 
   return (
