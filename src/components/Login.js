@@ -21,6 +21,7 @@ const Login = props => {
       .post("/auth/login", credentials)
       .then(res => {
         localStorage.setItem("token", res.data.token);
+        localStorage.setItem("user_id", res.data.user_id);
         console.log(res.data)
         props.history.push("/listoften");
       })
