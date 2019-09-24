@@ -18,6 +18,7 @@ function App() {
     <LandingPage/>  
     <SignUp/>
     <Login/>
+    <Route path="/listoften" component={ListOfTen} />
     <Route path="/top3" component={Top3} />
     <Route path="/projects" component={FormikActivityForm} />
 
