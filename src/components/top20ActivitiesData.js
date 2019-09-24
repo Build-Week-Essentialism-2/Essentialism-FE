@@ -1,0 +1,3 @@
+import React from 'react';
+
+export const top20ActivitiesData = ['Athletic abilty', 'Art & Literature', 'Creativity', 'Discovering & Inventing', 'Making a difference in the world', 'Independence', 'Kindness', 'Generosity', 'Spontaneity', 'Member of a social group', 'Music', 'Contributing to my community', 'Moral principles', 'Nature & the environment', 'Friends', 'Family', 'Sense of humour', 'Career success', 'Helping others', 'Looking after my health']
