@@ -27,27 +27,28 @@ export default class LandingPage extends React.Component {
   }
   render() {
     return (
-      <div class="main-div">
+      <div className="main-div">
         <header>
-          <h3>essentialism</h3>
-          <div class="buttons-div">
+          <h3 className="logo">essentialism</h3>
+          <div className="buttons-div">
             <NavLink to={"register"}>
-              <button>Sign Up</button>
+              <button className="signup-nav">Sign Up</button>
             </NavLink>
             <NavLink to={"login"}>
-              <button>Log In</button>
+              <button className="login-nav">Log In</button>
             </NavLink>
           </div>
         </header>
-        <section>
-          <div>
+        <section className="body">
+          <div className="body-text">
             <h1>Declutter Your Life</h1>
             <NavLink to={"register"}>
-              <button>Create an Account</button>
+              <button className="signup-body">Create an Account</button>
             </NavLink>
           </div>
-          <div>
+          <div className="body-testimonial">
             <img
+              className="body-image"
               src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
               alt="woman smiling"
             ></img>
