@@ -1,5 +1,8 @@
 import React, {useState} from "react"
 import ActivityButton from "./components/ActivityComponent"
+import {Link} from "react-router-dom"
+
+
 
 const Activities = [
     {name:"Activity 1"},
@@ -10,7 +13,7 @@ const Activities = [
 
 
 const Top3 = (props) => {
-
+    const [topThree, setTopThree] = useState([])
     const [note, setNote] = useState({ body: "" });
 
     const handleChanges = e => {
@@ -44,7 +47,9 @@ return (
         onChange={handleChanges}
         value={note.body}
       />
+      <Link to="/projects">
       <button className="submit-button">Submit </button> 
+      </Link>
     </form>
 </div>
 )

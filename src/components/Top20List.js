@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { top20ActivitiesData } from './Top20ActivitiesData';
+import { top20ActivitiesData } from './top20ActivitiesData';
 
 
 

@@ -7,8 +7,8 @@ export default function NavBar() {
           <NavLink to = {`/`}>Home</NavLink>
           <NavLink to = {`/allvalues`}>All Values</NavLink>
           <NavLink to = {`/listoften`}>Top Ten</NavLink>
-          <NavLink to = {`/top3`}>Top Three</NavLink>
-          <NavLink to = {`/projects`}>My Values</NavLink>
+          <NavLink to = {`/top3`}>My Values</NavLink>
+          <NavLink to = {`/projects`}>Current Projects</NavLink>
           <NavLink to = {`/compare`}>Compare</NavLink>
           <NavLink to = {`/`}>Sign Out</NavLink>
         </nav>  
