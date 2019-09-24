@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 function Top20Display(props) {
   console.log(props);
   return (

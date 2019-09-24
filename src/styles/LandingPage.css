@@ -1,13 +1,94 @@
 .main-div {
-    /* background-image: url("https://images.unsplash.com/photo-1464618663641-bbdd760ae84a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-family: 'Open Sans Condensed', sans-serif;
     
-     */
 }
 
 header {
     display: flex; 
+    justify-content: space-between;
+    width: 100%; 
+    padding: 20px 0; 
+}
+
+
+.buttons-div {
+    padding-right: 50px; 
+}
+
+.signup-nav{
+    background: #1c7980;
+    text-decoration: none; 
+    border: none; 
+    margin-left: 10px;
+    width: 150px; 
+    padding: 10px;  
+    border-radius: 10px; 
+    font-size: 1.2rem; 
+}
+
+.login-nav{
+    background: #acc1d2;
+    text-decoration: none; 
+    border: none; 
+    margin-left: 10px;
+    width: 150px; 
+    padding: 10px;  
+    border-radius: 10px; 
+    font-size: 1.2rem; 
+}
+
+.logo {
+    padding-left: 50px; 
+    font-size: 2rem; 
+    margin: 0; 
+}
+
+.body {
+    padding: 5%; 
+    margin: 0 auto; 
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.body-text {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 10%;
+
+}
+
+.body-text h1 {
+    font-size: 3.5rem; 
+}
+
+.body-text button {
+    background: #1c7980;
+    text-decoration: none; 
+    border: none; 
+    margin-left: 10px;
+    width: 200px; 
+    padding: 10px;  
+    border-radius: 10px; 
+    font-size: 1.2rem; 
+}
+
+.body-testimonial {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.body-image {
+    width: 30%; 
+    border-radius: 10px; 
+}
+
+.body-testimonial p {
+    font-size: 2rem; 
 }
