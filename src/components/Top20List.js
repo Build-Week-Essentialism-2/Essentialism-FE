@@ -10,7 +10,11 @@ function Top20List() {
   const addTop10 = event => {
     // event.preventDefault();
     const newEntry = event.target.value;
-    top10.push(newEntry);
+    // console.log(newEntry);
+    const newList = top10.concat(newEntry);
+    setTop10(newList);
+    // top10.push(newEntry);
+    console.log(top10);
   }
 
 
@@ -30,13 +34,13 @@ function Top20List() {
         }
       </div>
       <h4>You selected: </h4>
-      <div>
+      <div className="jayne-selections">
         {
-          top10.length
+          top10.length > 0
           ? top10.map((info) => (
-            <div key={info}>{info}</div>
+            <div className="jayne-top10div" key={info}>{info}</div>
           ))
-          : 'No Activities selected!'
+          : 'No activites selected'
         }
       </div>
     </div>

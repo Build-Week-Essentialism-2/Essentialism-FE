@@ -17,6 +17,16 @@
   margin: 10px;
 }
 
-.jayne-buttons:focus{
-  background-color: black;
+.jayne-selections{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50vw;
+  text-align: center;
+}
+
+.jayne-top10div{
+  border: 1px dashed #1C7980;
+  padding: 0px 5px;
+  margin: 5px;
 }
