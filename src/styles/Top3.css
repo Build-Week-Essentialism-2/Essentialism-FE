@@ -1,4 +1,4 @@
-*{
+.top3page{
     background-color: #F4F4EC;
 }
 
@@ -6,6 +6,7 @@
     margin:5vh;
     display:flex;
     justify-content: space-around;
+    background-color: #F4F4EC;
 }
 
 .button{

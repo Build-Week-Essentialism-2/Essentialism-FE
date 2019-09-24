@@ -3,10 +3,11 @@ import { withFormik, Form, Field } from 'formik';
 import ActivityButton from './ActivityComponent';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import styled from 'styled-components';
+import { red } from 'ansi-colors';
 
 
 const ListOfTen = (props) => {
-    const [topThree, setTopThree] = useState([])
+    const [topThree, setTopThree] = useState([]);
     const tempButtonArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     const buttonClicked = (event) => {
         event.preventDefault();
@@ -21,12 +22,18 @@ const ListOfTen = (props) => {
             console.log(response)
         })
     })
+
     const TopTenButton = styled.button`
-        background: lightblue; 
+        background: #445FE8;
+        color: white; 
         border: 0px solid turquoise;
         width: 100px;   
         height: 40px;
         margin: 20px;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 1.2rem;
+        border-radius: 5%;
+       
     `
     const TopTenContainer = styled.div`
         text-align: center;
@@ -39,15 +46,23 @@ const ListOfTen = (props) => {
         align-content: center;
         justify-content: space-around;
     `
+    const TenTitle = styled.h1`
+        font-family: 'Open Sans Condensed', sans-serif;
+    `
+    const PageInstructinons = styled.p`
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 1.6rem;
+    `
     return (
         <TopTenContainer>
-            <h1>Top Ten List</h1>
-            <p>Please select your three highest priorities from this list</p>
+            <TenTitle>Top Ten List</TenTitle>
+            <PageInstructinons>Please select your three highest priorities from this list</PageInstructinons>
             <TenButtonsContainer>
                 {tempButtonArray.map( item =>
                     <TopTenButton onClick={buttonClicked} name={item} value={item}>{item}</TopTenButton>
                 )}
              </TenButtonsContainer>
+             
         </TopTenContainer>
     )    
 };

@@ -10,8 +10,10 @@ import LandingPage from './components/LandingPage';
 import './styles/ActivityPrompt.css'
 import FormikActivityForm from "./components/ActivityPrompt"
 import NavBar from './components/NavBar';
-import Top20List from './components/Top20List';
+import Top20List from './components/Top20List'
 import './styles/Top20.css'
+import Compare from './components/Compare'
+
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
     <Route path="/listoften" component={ListOfTen} />
     <Route path="/top3" component={Top3} />
     <Route path="/projects" component={FormikActivityForm} />
-    {/* <Route path="/compare" component={Compare} /> */}
+    <Route path="/compare" component={Compare} />
 
     </div>
   );
