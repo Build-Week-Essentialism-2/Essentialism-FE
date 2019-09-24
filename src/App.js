@@ -17,7 +17,6 @@ function App() {
     <LandingPage/>  
     <SignUp/>
     <Login/>
-    <Top3 />
     <Route path="/top3" component={Top3} />
     <Route path="/projects" component={FormikActivityForm} />
 
