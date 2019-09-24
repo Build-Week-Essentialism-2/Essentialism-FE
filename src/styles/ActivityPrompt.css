@@ -1,0 +1,53 @@
+.form-container{
+    display:flex;
+    justify-content: center;
+}
+
+.project-title{
+    margin:5vh;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.project-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:2vh;
+}
+
+.project1, .project2, .project3{
+    margin:3vh;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:1.3rem;
+}
+
+.project1-field, .project2-field, .project3-field{
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #E2E8E8;
+    border-color: #668B99;
+    font-size:1.3rem;
+    margin: 2vh;
+    padding:2vh;
+    width:200px;
+}
+
+.project-list-container{
+    
+}
+
+.project-list{
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #E2E8E8;
+    list-style-type: none;
+    text-align: center;
+    padding:20px;
+    margin: 2vh;
+
+}
+
+li{
+    background-color: #E2E8E8;
+}
+

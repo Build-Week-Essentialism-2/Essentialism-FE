@@ -1,3 +1,7 @@
+*{
+    background-color: #F4F4EC;
+}
+
 .button-container{
     margin:5vh;
     display:flex;
@@ -18,6 +22,7 @@
 }
 
 .value-descript{
+    font-size:1.75rem;
     font-family: 'Open Sans Condensed', sans-serif;
     margin:5vh;
     text-align:center;
@@ -25,9 +30,29 @@
 }
 
 .values-form{
-    margin:5vh;
+    margin:3vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.note{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:1.5rem;
+    margin:3vh;
+}
+
+.text-box{
+    height:200px;
+    width:400px;
+    background-color: #fff;
+}
+
+.submit-button{
+    background-color: #ACC1D2;
+    font-size: 1.25rem;
+    padding:10px 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 3vh;
 }
