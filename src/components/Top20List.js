@@ -22,6 +22,7 @@ function Top20List() {
           top20ActivitiesData.map((info) => (
             <div>
               <Top20Display key={info.id} info={info}/>
+              {/* <button className="jayne-buttons">{info.activity}</button> */}
             </div>
           ))
         }
