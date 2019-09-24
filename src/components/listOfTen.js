@@ -2,9 +2,15 @@ import React, {useState} from 'react';
 import { withFormik, Form, Field } from 'formik';
 import ActivityButton from './ActivityComponent';
 
-const ListOfTen = ({ values }) => {
-    const [topTen, setTopTen] = useState([]);
+const ListOfTen = (props) => {
+    const topThree = []
     const tempButtonArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const buttonClicked = (event) => {
+        event.preventDefault();
+        console.log('button is clicked');
+        topThree.push(props.value)
+        console.log(topThree)
+    }
     return (
         <div className='top-ten-container'>
             <h1>Top Ten List</h1>
@@ -12,10 +18,12 @@ const ListOfTen = ({ values }) => {
             <div className="button-container">
                 {tempButtonArray.map( item =>
                     
-                    <ActivityButton name={item}/>
+                    <button onClick={buttonClicked}>{item}</button>
                 )}
              </div>
+             
         </div>
+        
     )    
 };
 
