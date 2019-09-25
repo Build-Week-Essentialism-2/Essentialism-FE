@@ -23,6 +23,15 @@ const ListOfTen = (props) => {
             console.log(topThree.length)
          };   
     };
+    const resetItems = (event) => {
+        event.preventDefault()
+        topThree.forEach(item => {
+            item.priority = null
+            values.push(item)
+        })
+        setTopThree([])
+        console.log("top3", topThree)
+    }
     topThree.forEach(item => {
         item.priority = true
         item.user_id = localStorage.getItem("user_id")
@@ -93,10 +102,11 @@ const ListOfTen = (props) => {
                  {topThree.map(item => 
                     <PickedItems>{item.value}</PickedItems>
                 )}
+                <TopTenButton onClick={resetItems}>Reset Choices</TopTenButton>
              </PickedContainer>
              
                 <NavLink to = {`/top3`}>
-                    <TopTenButton>Next Page</TopTenButton>
+                    <TopTenButton >Next Page</TopTenButton>
                 </NavLink>
              
         </TopTenContainer>
