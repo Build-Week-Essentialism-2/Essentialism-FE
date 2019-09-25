@@ -10,6 +10,7 @@ const ListOfTen = (props) => {
          if (topThree.length >= 3) {
             alert('You may only select three')
          } else {
+            event.target.priority = true 
             event.preventDefault()
             console.log('button is clicked')
             setTopThree([...topThree, {[event.target]: event.target.value}])
@@ -17,7 +18,10 @@ const ListOfTen = (props) => {
             console.log(topThree.length)
          };   
     };
-    // console.log(props.data)
+    topThree.forEach(item => {
+        item.priority = true
+    });
+    console.log(initialState)
     useEffect(() => {
         axiosWithAuth()
         .get('/api/tasks')
@@ -36,8 +40,7 @@ const ListOfTen = (props) => {
         background: #445FE8;
         color: white; 
         border: 0px solid turquoise;
-        width: 100px;   
-        height: 40px;
+        padding: 15px;
         margin: 20px;
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.2rem;
@@ -50,7 +53,7 @@ const ListOfTen = (props) => {
     const TenButtonsContainer = styled.div`
         display: flex;
         flex-direction: column;
-        height: 415px;
+        height: 500px;
         flex-wrap: wrap;
         align-content: center;
         justify-content: space-around;
