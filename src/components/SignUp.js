@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import "../styles/SignUp.css";
 
 const SignUp = props => {
 
@@ -27,23 +28,24 @@ const SignUp = props => {
   };
 
   return (
-    <div>
+    <div className="signup-div">
+      <section className="form">
       <form onSubmit={register}>
-        Username:
+      <h1 className="form-title">Username:</h1>
         <input
           type="text"
           name="username"
           value={credentials.username}
           onChange={handleChange}
         />
-        E-mail:
+        <h1 className="form-title">E-mail:</h1>
         <input
           type="text"
           name="email"
           value={credentials.email}
           onChange={handleChange}
         />
-        Password:
+        <h1 className="form-title">Password:</h1>
         <input
           type="password"
           name="password"
@@ -52,6 +54,7 @@ const SignUp = props => {
         />
         <button>Sign Up</button>
       </form>
+      </section>
     </div>
   );
 };
