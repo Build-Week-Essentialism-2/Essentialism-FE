@@ -5,14 +5,18 @@ import {axiosWithAuth} from "../utils/axiosWithAuth"
 import {Link} from "react-router-dom"
 
 const ActivityForm = ({values, status, touched, errors}) => {
-    const [projects, setProject] = useState([])
+    // const [projects, setProject] = useState([])
+// console.log(status)
+// console.log(values)
 
-    useEffect(()=> {
-        if (status) {
-            setProject([...projects, status])
-            console.log(projects)
-        }
-    }, [status])
+    // useEffect(()=> {
+    //     if (status) {
+    //         setProject(status)
+    //         console.log(projects)
+            
+           
+    //     }
+    // }, [status])
 
     return (
         <div className="project-page">
@@ -48,9 +52,10 @@ const ActivityForm = ({values, status, touched, errors}) => {
                 />
                 </label>
                 {touched.project3 && errors.project3 && <p className="error">{errors.project3}</p>}
-                
+
+                <button type="submit"  className="submit-button">Submit </button>
                 <Link to="/compare">
-                <button className="submit-button">Submit </button>
+                
                 </Link>
 
                 {/* <div className="project-list-container">                
@@ -72,16 +77,21 @@ const ActivityForm = ({values, status, touched, errors}) => {
         </div>
 
     )
+    
 }
+
 
 const FormikActivityForm= withFormik({
     mapPropsToValues({project1, project2, project3}) {
         return {
             project1: project1 || "",
-            project2: project2 || "",
-            project3: project3 || "",
-                }
-    },
+            user_id: localStorage.getItem('user_id'),
+            project2: project2 || "",          
+            project3: project3 || ""
+            
+            }
+        },
+    
     
     validationSchema: Yup.object().shape({
         project1: Yup.string().required("Please enter your first project or activity."),
@@ -92,14 +102,30 @@ const FormikActivityForm= withFormik({
     }),
 
     handleSubmit(values, {setStatus, resetForm}) {
-        resetForm('');
+        console.log("THIS IS FROM HANDLE SUBMIT")
+       const payload = [{
+            task_name:values.project1,
+            user_id:values.user_id,
+        },
+        {
+            task_name:values.project2,
+            user_id:values.user_id,
+        },
+        {
+            task_name:values.project3,
+            user_id:values.user_id,
+        }
+        ]
+        // resetForm('');
         axiosWithAuth()
-        .post('https://cors-anywhere.herokuapp.com/https://essentialism-be.herokuapp.com/api/tasks', values)
-        .then(res => {
-            setStatus(res.data)
-            console.log(res)
+        .post('/api/tasks', payload)
+        .then((res) => {
+            console.log(res)            
+            // setStatus(res)
+            // props.history.push("/compare");
         })
         .catch(err => console.log(err.res))
+        
     }
 
 
