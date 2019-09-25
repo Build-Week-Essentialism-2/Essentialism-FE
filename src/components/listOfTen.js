@@ -40,8 +40,7 @@ const ListOfTen = (props) => {
         background: #445FE8;
         color: white; 
         border: 0px solid turquoise;
-        width: 100px;   
-        height: 40px;
+        padding: 15px;
         margin: 20px;
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.2rem;
@@ -54,7 +53,7 @@ const ListOfTen = (props) => {
     const TenButtonsContainer = styled.div`
         display: flex;
         flex-direction: column;
-        height: 415px;
+        height: 500px;
         flex-wrap: wrap;
         align-content: center;
         justify-content: space-around;
@@ -71,7 +70,7 @@ const ListOfTen = (props) => {
             <TenTitle>Top Ten List</TenTitle>
             <PageInstructinons>Please select your three highest priorities from this list</PageInstructinons>
             <TenButtonsContainer>
-                {initialState.map( item =>
+                {values.map( item =>
                     <TopTenButton onClick={buttonClicked} name={item.value} value={item.value}>{item.value}</TopTenButton>
                 )}
              </TenButtonsContainer>
