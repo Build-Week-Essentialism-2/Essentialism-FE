@@ -8,12 +8,9 @@ function Top20List() {
   const [top10, setTop10] = useState([]);
 
   const addTop10 = event => {
-    // event.preventDefault();
     const newEntry = event.target.value;
-    // console.log(newEntry);
     const newList = top10.concat(newEntry);
     setTop10(newList);
-    // top10.push(newEntry);
     console.log(top10);
   }
 
