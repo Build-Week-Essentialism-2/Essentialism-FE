@@ -39,7 +39,7 @@ function Top20List(props) {
           ))
         }
       </div>
-      {/* <h4>You selected: </h4>
+      <h4>You selected: </h4>
       <div className="jayne-selections">
         {
           top10.length > 0
@@ -48,7 +48,7 @@ function Top20List(props) {
           ))
           : 'No activites selected'
         }
-      </div> */}
+      </div>
     </div>
   )
 }
