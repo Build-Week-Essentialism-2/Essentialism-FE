@@ -36,20 +36,19 @@ const ListOfTen = (props) => {
         setTopThree([])
         console.log("top3", topThree)
     };
-
+    /////////////////////////////NavLink onClick function//////////////////////////////////
+    const restrictNav = (event) => {
+        if (topThree.length < 3){
+            event.preventDefault()
+            alert('You must select three items to continue')
+        } 
+    }
     ////////////////////////////Setting each item in topThree to priority=null////////////////////
     topThree.forEach(item => {
         item.priority = true
-        item.user_id = localStorage.getItem("user_id")
+        // item.user_id = localStorage.getItem("user_id")
     });
-    useEffect(() => {
-        axiosWithAuth()
-        .get('/api/tasks')
-        .then(response => {
-            console.log(response)
-        })
-    }, []);
-
+    
     /////////////////////////////Values brought in from list of 20 component//////////////////////////////
     const values = initialState.filter(data => {
         return data.priority === null
@@ -117,7 +116,7 @@ const ListOfTen = (props) => {
                 <TopTenButton onClick={resetItems}>Reset Choices</TopTenButton>
              </PickedContainer>
              
-                <NavLink to = {`/top3`}>
+                <NavLink onClick={restrictNav} to={`/top3`} >
                     <TopTenButton >Next Page</TopTenButton>
                 </NavLink>
              
