@@ -1,9 +1,18 @@
 
+.return-div{
+  width: 80vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
 .jayne-display{
   display:flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
   padding: 10px;
 }
 
@@ -15,6 +24,7 @@
   border: 1px solid black;
   padding:5px 10px;
   margin: 10px;
+  text-decoration: none;
 }
 
 .jayne-selections{
@@ -23,10 +33,23 @@
   flex-wrap: wrap;
   width: 50vw;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .jayne-top10div{
   border: 1px dashed #1C7980;
   padding: 0px 5px;
   margin: 5px;
+}
+
+.jayne-next-div{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:1.4rem;
+  padding:5px 10px;
+  margin: 10px;
+  text-decoration: none;
 }

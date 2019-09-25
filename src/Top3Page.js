@@ -4,17 +4,9 @@ import {Link} from "react-router-dom"
 
 
 
-const Activities = [
-    {name:"Activity 1"},
-    {name:"Activity 2"},
-    {name:"Activity 3"}
-]
-
-
-
 const Top3 = (props) => {
-    const [topThree, setTopThree] = useState([])
     const [note, setNote] = useState({ body: "" });
+    const [initialState, setInitialState] = useState(props.data)
 
     const handleChanges = e => {
         setNote({...note, [e.target.name]: e.target.value })
@@ -24,15 +16,20 @@ const Top3 = (props) => {
     e.preventDefault();
     setNote({ body: "" });
   };
+ 
+  
+console.log(props)
+const values = initialState.filter(data => {
+        return data.priority === true
+ })       
 
 return (
 <div className= "top3page"> 
 <div className="button-container"> 
-    <ActivityButton name={Activities[0].name} />
-    <ActivityButton name={Activities[1].name} />
-    <ActivityButton name={Activities[2].name} />
-
-</div>
+    {values.map( item =>
+                    <ActivityButton name={item.value} value={item.value}>{item.value}</ActivityButton>
+                )}
+</div> 
 
     <div className="descript-container">
     <h3 className="value-descript"> In a few sentences, describe why the selected values are important to you. Focus on thoughts and feelings, don't worry about spelling or grammar. </h3>
