@@ -1,4 +1,20 @@
 .compare-page{
+    margin:5vh;
     display:flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.values{
+    padding:5vh;
+    margin: 5vh;
+    display:flex;
+    flex-direction: column;
+    align-content: space-around;
+   
+}
+
+.value{
+    padding:5vh;
     
 }
