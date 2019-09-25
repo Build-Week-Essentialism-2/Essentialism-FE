@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-
-
+import {Link} from 'react-router-dom';
 
 function Top20List(props) {
 
@@ -20,13 +19,12 @@ function Top20List(props) {
   }
   top10.forEach(data => {
     data.user_id = localStorage.getItem("user_id")
-    data.priority = null
-    console.log(data);}
+    data.priority = null}
   )
   console.log(top10);
 
   return (
-    <div>
+    <div className="return-div">
       <h1>Essentialism</h1>
       <h2>Which activities are important to you?</h2>
       <h3>Select your Top Ten</h3>
@@ -34,7 +32,7 @@ function Top20List(props) {
         {
           initialState.map((info) => (
             <div>
-              <button className="jayne-buttons" key={info.value} value={info.value} priority={info.priority} user_id={info.user_id} onClick={addTop10}>{info.value}</button>
+              <button className="jayne-buttons" key={info.value} value={info.value} onClick={addTop10}>{info.value}</button>
             </div>
           ))
         }
@@ -49,6 +47,17 @@ function Top20List(props) {
           : 'No activites selected'
         }
       </div>
+      <div className="jayne-selections">
+        {
+          top10.length >= 10
+          ? <p>You've reached your maximum</p>
+          : <p>Pick up to 10 buttons</p>
+        }
+      </div >
+      <div className="jayne-next-div">
+        <Link to="/listoften" className="jayne-buttons">Next</Link>
+      </div>
+      
     </div>
   )
 }
