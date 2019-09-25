@@ -14,6 +14,14 @@ const Compare = (props) => {
 
     })
     
+    useEffect(()=>{
+        axiosWithAuth()
+        .get('https://cors-anywhere.herokuapp.com/https://essentialism-be.herokuapp.com/api/tasks/')
+        .then (res => {
+            setTasks(res.data)
+        })
+        .catch(error => console.log(error, "ERROR"))
+    })
 
     return (
         <div className="compare-page">

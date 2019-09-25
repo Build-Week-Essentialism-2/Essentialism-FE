@@ -48,6 +48,7 @@ const ActivityForm = ({values, status, touched, errors}) => {
                 />
                 </label>
                 {touched.project3 && errors.project3 && <p className="error">{errors.project3}</p>}
+                
                 <Link to="/compare">
                 <button className="submit-button">Submit </button>
                 </Link>
@@ -93,10 +94,10 @@ const FormikActivityForm= withFormik({
     handleSubmit(values, {setStatus, resetForm}) {
         resetForm('');
         axiosWithAuth()
-        .post('https://cors-anywhere.herokuapp.com/https://essentialism-be.herokuapp.com/api/tasks')
+        .post('https://cors-anywhere.herokuapp.com/https://essentialism-be.herokuapp.com/api/tasks', values)
         .then(res => {
             setStatus(res.data)
-            console.log(res.data)
+            console.log(res)
         })
         .catch(err => console.log(err.res))
     }
