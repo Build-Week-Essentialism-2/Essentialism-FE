@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
-import { elijahArray } from './Top20ActivitiesData';
 
 
 
-function Top20List() {
+function Top20List(props) {
 
-  const [initialState, setInitialState] = useState(elijahArray);
+  const [initialState, setInitialState] = useState(props.data);
   const [top10, setTop10] = useState([]);
 
   const addTop10 = event => {
+
     const newEntry = event.target.value;
+    
     const selected = initialState.filter((info) => {
       return newEntry === info.value
     })
@@ -17,6 +18,11 @@ function Top20List() {
     const newList = top10.concat(selected);
     setTop10(newList);
   }
+  top10.forEach(data => {
+    data.user_id = localStorage.getItem("user_id")
+    data.priority = null
+    console.log(data);}
+  )
   console.log(top10);
 
   return (
@@ -26,14 +32,14 @@ function Top20List() {
       <h3>Select your Top Ten</h3>
       <div className="jayne-display">
         {
-          elijahArray.map((info) => (
+          initialState.map((info) => (
             <div>
               <button className="jayne-buttons" key={info.value} value={info.value} priority={info.priority} user_id={info.user_id} onClick={addTop10}>{info.value}</button>
             </div>
           ))
         }
       </div>
-      <h4>You selected: </h4>
+      {/* <h4>You selected: </h4>
       <div className="jayne-selections">
         {
           top10.length > 0
@@ -42,7 +48,7 @@ function Top20List() {
           ))
           : 'No activites selected'
         }
-      </div>
+      </div> */}
     </div>
   )
 }
