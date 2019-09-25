@@ -3,15 +3,30 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
     return (
-        <nav>
-          <NavLink to = {`/`}>Home</NavLink>
-          <NavLink to = {`/allvalues`}>All Values</NavLink>
-          <NavLink to = {`/listoften`}>Top Ten</NavLink>
-          <NavLink to = {`/top3`}>My Values</NavLink>
-          <NavLink to = {`/projects`}>Current Projects</NavLink>
-          <NavLink to = {`/compare`}>Compare</NavLink>
-          <NavLink to = {`/`}>Sign Out</NavLink>
-        </nav>  
+      <div>
+        <ul className="navbar">
+          <li>
+          <NavLink to="/" activeClassName="activeNavButton">Home</NavLink>
+          </li>
+          <li>
+          <NavLink to="/allvalues" activeClassName="activeNavButton">All Values</NavLink>
+          </li>
+          <li>
+          <NavLink to="/listoften" activeClassName="activeNavButton">Top Ten</NavLink>
+          </li>
+          <li>
+          <NavLink to="/top3" activeClassName="activeNavButton">My Values</NavLink>
+          </li>
+          <li>
+          <NavLink to="/projects" activeClassName="activeNavButton">Current Projects</NavLink>
+          </li>
+          <li>
+          <NavLink to="/compare" activeClassName="activeNavButton">Compare</NavLink></li>
+          <li>
+          <NavLink to="/" activeClassName="activeNavButton">Sign Out</NavLink>
+          </li>
+        </ul>
+      </div> 
           );
 
 };

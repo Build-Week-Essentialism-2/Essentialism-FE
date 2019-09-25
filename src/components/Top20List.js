@@ -17,6 +17,12 @@ function Top20List(props) {
     const newList = top10.concat(selected);
     setTop10(newList);
   }
+
+  const resetItems = (event) => {
+    event.preventDefault()
+    setTop10([])
+};
+
   top10.forEach(data => {
     data.user_id = localStorage.getItem("user_id")
     data.priority = null}
@@ -54,6 +60,7 @@ function Top20List(props) {
           : <p>Pick up to 10 buttons</p>
         }
       </div >
+      <div className="jayne-buttons" onClick={resetItems}>Reset Choices</div>
       <div className="jayne-next-div">
         <Link to="/listoften" className="jayne-buttons">Next</Link>
       </div>
