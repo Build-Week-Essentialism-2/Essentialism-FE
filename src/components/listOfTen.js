@@ -10,14 +10,10 @@ const ListOfTen = (props) => {
          if (topThree.length >= 3) {
             alert('You may only select three')
          } else {
-<<<<<<< HEAD
-            // event.target.priority = true 
-=======
             const newEntry = event.target.value;
             const selected = initialState.filter((info) => {
                 return newEntry === info.value
             }) 
->>>>>>> bc765da9895459e2e9bbaafbf0a87cc7ae37a3c8
             event.preventDefault()
             console.log('button is clicked')
             // setTopThree([...topThree, {[event.target]: event.target.value}])
