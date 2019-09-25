@@ -5,11 +5,12 @@ import styled from 'styled-components';
 
 const ListOfTen = (props) => {
     const [topThree, setTopThree] = useState([]);
-    const [initialState, setInitialState] = useState([props.data])
+    const [initialState, setInitialState] = useState(props.data)
     const buttonClicked = (event) => {
          if (topThree.length >= 3) {
             alert('You may only select three')
          } else {
+            event.target.priority = true 
             event.preventDefault()
             console.log('button is clicked')
             setTopThree([...topThree, {[event.target]: event.target.value}])
@@ -17,7 +18,10 @@ const ListOfTen = (props) => {
             console.log(topThree.length)
          };   
     };
-    // console.log(props.data)
+    topThree.forEach(item => {
+        item.priority = true
+    });
+    console.log(initialState)
     useEffect(() => {
         axiosWithAuth()
         .get('/api/tasks')
