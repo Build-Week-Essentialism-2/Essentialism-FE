@@ -4,16 +4,7 @@ import {Link} from "react-router-dom"
 
 
 
-const Activities = [
-    {name:"Activity 1"},
-    {name:"Activity 2"},
-    {name:"Activity 3"}
-]
-
-
-
 const Top3 = (props) => {
-    const [topThree, setTopThree] = useState([])
     const [note, setNote] = useState({ body: "" });
     const [initialState, setInitialState] = useState(props.data)
 
@@ -27,7 +18,7 @@ const Top3 = (props) => {
   };
  
   
-
+console.log(props)
 const values = initialState.filter(data => {
         return data.priority === true
  })       
