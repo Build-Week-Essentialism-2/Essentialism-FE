@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import styled from 'styled-components';
-
+import { NavLink } from "react-router-dom";
 
 const ListOfTen = (props) => {
     const [topThree, setTopThree] = useState([]);
@@ -10,18 +10,27 @@ const ListOfTen = (props) => {
          if (topThree.length >= 3) {
             alert('You may only select three')
          } else {
+<<<<<<< HEAD
             // event.target.priority = true 
+=======
+            const newEntry = event.target.value;
+            const selected = initialState.filter((info) => {
+                return newEntry === info.value
+            }) 
+>>>>>>> bc765da9895459e2e9bbaafbf0a87cc7ae37a3c8
             event.preventDefault()
             console.log('button is clicked')
-            setTopThree([...topThree, {[event.target]: event.target.value}])
+            // setTopThree([...topThree, {[event.target]: event.target.value}])
+            const newList = topThree.concat(selected);
+            setTopThree(newList)
             console.log(topThree)
             console.log(topThree.length)
          };   
     };
     topThree.forEach(item => {
         item.priority = true
+        item.user_id = localStorage.getItem("user_id")
     });
-    console.log(initialState)
     useEffect(() => {
         axiosWithAuth()
         .get('/api/tasks')
@@ -74,6 +83,7 @@ const ListOfTen = (props) => {
                     <TopTenButton onClick={buttonClicked} name={item.value} value={item.value}>{item.value}</TopTenButton>
                 )}
              </TenButtonsContainer>
+             <NavLink to = {`/top3`}>Next</NavLink>
         </TopTenContainer>
     )    
 };
