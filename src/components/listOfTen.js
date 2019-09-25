@@ -71,15 +71,18 @@ const ListOfTen = (props) => {
         padding: 0px 5px;
         margin: 5px;
         width: 180px;
+        font-size: 1.2rem;
     `
     const PickedContainer = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 1.5rem;
     `
     return (
         <TopTenContainer>
-            <TenTitle>Top Ten List</TenTitle>
+            <TenTitle>Your Top Ten Choices</TenTitle>
             <PageInstructinons>Please select your three highest priorities from this list</PageInstructinons>
             <TenButtonsContainer>
                 {values.map( item =>
