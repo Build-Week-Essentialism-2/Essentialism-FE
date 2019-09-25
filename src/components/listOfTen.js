@@ -33,7 +33,8 @@ const ListOfTen = (props) => {
         margin: 20px;
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.2rem;
-        border-radius: 5%;    
+        border-radius: 5%; 
+        ${props => (props.type === "clicked" ? `background: white` : null)} 
     `
     const TopTenContainer = styled.div`
         text-align: center;
@@ -59,7 +60,7 @@ const ListOfTen = (props) => {
             <PageInstructinons>Please select your three highest priorities from this list</PageInstructinons>
             <TenButtonsContainer>
                 {tempButtonArray.map( item =>
-                    <TopTenButton onClick={buttonClicked} name={item} value={item}>{item}</TopTenButton>
+                    <TopTenButton onClick={buttonClicked} type='' name={item} value={item}>{item}</TopTenButton>
                 )}
              </TenButtonsContainer>
         </TopTenContainer>
