@@ -34,9 +34,6 @@ const ListOfTen = (props) => {
             console.log(response)
         })
     }, []);
-    // setInitialState(initialState.filter(data => {
-    //     data.priority === false
-    // }));
     const values = initialState.filter(data => {
         return data.priority === null
     })
@@ -50,7 +47,6 @@ const ListOfTen = (props) => {
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.2rem;
         border-radius: 5%; 
-        ${props => (props.type === "clicked" ? `background: white` : null)} 
     `
     const TopTenContainer = styled.div`
         text-align: center;
@@ -70,6 +66,17 @@ const ListOfTen = (props) => {
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.6rem;
     `
+    const PickedItems = styled.p`
+        border: 1px dashed #1C7980;
+        padding: 0px 5px;
+        margin: 5px;
+        width: 180px;
+    `
+    const PickedContainer = styled.div`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    `
     return (
         <TopTenContainer>
             <TenTitle>Top Ten List</TenTitle>
@@ -79,7 +86,16 @@ const ListOfTen = (props) => {
                     <TopTenButton onClick={buttonClicked} name={item.value} value={item.value}>{item.value}</TopTenButton>
                 )}
              </TenButtonsContainer>
-             <NavLink to = {`/top3`}>Next</NavLink>
+             <PickedContainer> You have selected:
+                 {topThree.map(item => 
+                    <PickedItems>{item.value}</PickedItems>
+                )}
+             </PickedContainer>
+             
+                <NavLink to = {`/top3`}>
+                    <TopTenButton>Next Page</TopTenButton>
+                </NavLink>
+             
         </TopTenContainer>
     )    
 };
