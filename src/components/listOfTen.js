@@ -7,14 +7,15 @@ const ListOfTen = (props) => {
     const [topThree, setTopThree] = useState([]);
     const tempButtonArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     const buttonClicked = (event) => {
-         topThree.length >= 3 ?
+         if (topThree.length >= 3) {
             alert('You may only select three')
-            :
-            event.preventDefault();
-            console.log('button is clicked');
+         } else {
+            event.preventDefault()
+            console.log('button is clicked')
             setTopThree([...topThree, {[event.target.name]: event.target.value}])
             console.log(topThree)
-            console.log(topThree.length)   
+            console.log(topThree.length)
+         };   
     };
     useEffect(() => {
         axiosWithAuth()
