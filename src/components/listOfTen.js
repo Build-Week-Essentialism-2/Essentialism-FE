@@ -6,6 +6,8 @@ import { NavLink } from "react-router-dom";
 const ListOfTen = (props) => {
     const [topThree, setTopThree] = useState([]);
     const [initialState, setInitialState] = useState(props.data)
+
+    //////////////////////////////onClick function for Buttons/////////////////////////////////
     const buttonClicked = (event) => {
          if (topThree.length >= 3) {
             alert('You may only select three')
@@ -23,6 +25,8 @@ const ListOfTen = (props) => {
             console.log(topThree.length)
          };   
     };
+
+    /////////////////////////////Reset button onClick function///////////////////////////////
     const resetItems = (event) => {
         event.preventDefault()
         topThree.forEach(item => {
@@ -31,7 +35,9 @@ const ListOfTen = (props) => {
         })
         setTopThree([])
         console.log("top3", topThree)
-    }
+    };
+
+    ////////////////////////////Setting each item in topThree to priority=null////////////////////
     topThree.forEach(item => {
         item.priority = true
         item.user_id = localStorage.getItem("user_id")
@@ -43,10 +49,14 @@ const ListOfTen = (props) => {
             console.log(response)
         })
     }, []);
+
+    /////////////////////////////Values brought in from list of 20 component//////////////////////////////
     const values = initialState.filter(data => {
         return data.priority === null
     })
     console.log("afterFilter", values)
+
+    ///////////////////////////////////////////Styling////////////////////////////////////////////////
     const TopTenButton = styled.button`
         background: #445FE8;
         color: white; 
@@ -61,9 +71,9 @@ const ListOfTen = (props) => {
         text-align: center;
     `
     const TenButtonsContainer = styled.div`
+        margin: 0 auto;
         display: flex;
-        flex-direction: column;
-        height: 500px;
+        width: 542px;
         flex-wrap: wrap;
         align-content: center;
         justify-content: space-around;
@@ -89,6 +99,8 @@ const ListOfTen = (props) => {
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.5rem;
     `
+
+    ///////////////////////////////////Component that is displayed////////////////////////////////////////////
     return (
         <TopTenContainer>
             <TenTitle>Your Top Ten Choices</TenTitle>
