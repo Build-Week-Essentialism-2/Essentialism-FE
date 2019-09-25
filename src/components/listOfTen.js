@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const ListOfTen = (props) => {
     const [topThree, setTopThree] = useState([]);
-    const [initialState, setInitialState] = useState([props.data])
+    const [initialState, setInitialState] = useState(props.data)
     const buttonClicked = (event) => {
          if (topThree.length >= 3) {
             alert('You may only select three')
@@ -67,7 +67,7 @@ const ListOfTen = (props) => {
             <TenTitle>Top Ten List</TenTitle>
             <PageInstructinons>Please select your three highest priorities from this list</PageInstructinons>
             <TenButtonsContainer>
-                {initialState.map( item =>
+                {values.map( item =>
                     <TopTenButton onClick={buttonClicked} name={item.value} value={item.value}>{item.value}</TopTenButton>
                 )}
              </TenButtonsContainer>
