@@ -5,25 +5,33 @@ import styled from 'styled-components';
 
 const ListOfTen = (props) => {
     const [topThree, setTopThree] = useState([]);
-    const tempButtonArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const [initialState, setInitialState] = useState([props.data])
     const buttonClicked = (event) => {
          if (topThree.length >= 3) {
             alert('You may only select three')
          } else {
             event.preventDefault()
             console.log('button is clicked')
-            setTopThree([...topThree, {[event.target.name]: event.target.value}])
+            setTopThree([...topThree, {[event.target]: event.target.value}])
             console.log(topThree)
             console.log(topThree.length)
          };   
     };
+    // console.log(props.data)
     useEffect(() => {
         axiosWithAuth()
         .get('/api/tasks')
         .then(response => {
             console.log(response)
         })
-    });
+    }, []);
+    // setInitialState(initialState.filter(data => {
+    //     data.priority === false
+    // }));
+    const values = initialState.filter(data => {
+        return data.priority === null
+    })
+    console.log("afterFilter", values)
     const TopTenButton = styled.button`
         background: #445FE8;
         color: white; 
@@ -59,8 +67,8 @@ const ListOfTen = (props) => {
             <TenTitle>Top Ten List</TenTitle>
             <PageInstructinons>Please select your three highest priorities from this list</PageInstructinons>
             <TenButtonsContainer>
-                {tempButtonArray.map( item =>
-                    <TopTenButton onClick={buttonClicked} type='' name={item} value={item}>{item}</TopTenButton>
+                {initialState.map( item =>
+                    <TopTenButton onClick={buttonClicked} name={item.value} value={item.value}>{item.value}</TopTenButton>
                 )}
              </TenButtonsContainer>
         </TopTenContainer>
