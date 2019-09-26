@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import { axiosWithAuth } from '../utils/axiosWithAuth';
 import styled from 'styled-components';
 import { NavLink } from "react-router-dom";
 
@@ -65,6 +64,8 @@ const ListOfTen = (props) => {
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.2rem;
         border-radius: 5%; 
+        ${props => (props.className === 'reset-button' ? `background: #B91010;` : null)}
+        ${props => (props.className === 'next-button' ? `background: #2C5293;`: null)}
     `
     const TopTenContainer = styled.div`
         text-align: center;
@@ -113,11 +114,11 @@ const ListOfTen = (props) => {
                  {topThree.map(item => 
                     <PickedItems>{item.value}</PickedItems>
                 )}
-                <TopTenButton onClick={resetItems}>Reset Choices</TopTenButton>
+                <TopTenButton className='reset-button' onClick={resetItems}>Reset Choices</TopTenButton>
              </PickedContainer>
              
                 <NavLink onClick={restrictNav} to={`/top3`} >
-                    <TopTenButton >Next Page</TopTenButton>
+                    <TopTenButton className='next-button'>Next Page</TopTenButton>
                 </NavLink>
              
         </TopTenContainer>
