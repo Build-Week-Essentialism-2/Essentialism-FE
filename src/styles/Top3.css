@@ -3,18 +3,23 @@
 }
 
 .button-container{
-    margin:5vh;
+    
     display:flex;
     justify-content: space-around;
     background-color: #F4F4EC;
 }
 
 .value-button{
+    margin:5vh;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:2rem;
-    color: #E2E8E8;
-    background-color: #1C7980;
-    padding:20px 60px;
+    background: #1C7980;
+    color: white; 
+    border: none;
+    padding: 15px;
+    margin: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2rem;
+    border-radius: 5%;
 }
 
 .descript-container{
