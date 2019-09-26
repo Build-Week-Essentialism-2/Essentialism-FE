@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <Route path="/" render={props => <NavBar {...props} />} />
       <Route exact path="/" render={props => <LandingPage data={data} />} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={SignUp} />
