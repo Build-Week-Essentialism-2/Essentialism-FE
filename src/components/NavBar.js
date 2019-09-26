@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavBar(props) {
   
-  console.log(props)
+  
     return (
       <div>
         <ul className="navbar">
