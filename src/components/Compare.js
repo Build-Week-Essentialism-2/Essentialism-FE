@@ -26,6 +26,16 @@ const Compare = (props) => {
         .catch(error => console.log(error, "ERROR"))
     }, [])
 
+    const reset = (event) => {
+        axiosWithAuth()
+        .delete(`/api/tasks/${user_id}`)
+        .then (res => {
+            console.log(res)
+        })
+        .catch(error => console.log(error, "ERROR"))
+    }
+
+
     return (
         
         <div className="compare">
@@ -54,7 +64,10 @@ const Compare = (props) => {
                 ))}
 
         </div>
-        </div>        
+        </div>  
+        <button className="reset">
+        Reset Tasks
+        </button>      
         </div>
 
     )

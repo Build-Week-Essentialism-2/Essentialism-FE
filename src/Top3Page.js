@@ -44,7 +44,7 @@ return (
         onChange={handleChanges}
         value={note.body}
       />
-      <Link to="/projects/:id">
+      <Link to="/projects">
       <button className="submit-button">Submit </button> 
       </Link>
     </form>
