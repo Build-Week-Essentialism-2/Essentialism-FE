@@ -20,7 +20,7 @@ export default function NavBar(props) {
           <li>
           <NavLink to="/" activeClassName="activeNavButton">Home</NavLink>
           </li>
-          <li>
+          {/* <li>
           <NavLink to="/allvalues" activeClassName="activeNavButton">All Values</NavLink>
           </li>
           <li>
@@ -28,7 +28,7 @@ export default function NavBar(props) {
           </li>
           <li>
           <NavLink to="/top3" activeClassName="activeNavButton">My Values</NavLink>
-          </li>
+          </li> */}
           <li>
           <NavLink to="/projects/" activeClassName="activeNavButton">Current Projects</NavLink>
           </li>
