@@ -25,14 +25,17 @@ function App(props) {
     { value: "Independence", priority: false, user_id: null },
     { value: "Kindness", priority: false, user_id: null },
     { value: "Generosity", priority: false, user_id: null },
-    { value: 'Carpe diem, "Seize the day"', priority: false, user_id: null },
+    { value: 'Carpe diem', priority: false, user_id: null },
     { value: "Community", priority: false, user_id: null },
     { value: "Music", priority: false, user_id: null },
     { value: "Morals", priority: false, user_id: null },
     { value: "Environmentalism", priority: false, user_id: null },
+    { value: "Family", priority: false, user_id: null }, 
     { value: "Relationships", priority: false, user_id: null },
     { value: "Humor", priority: false, user_id: null },
-    { value: "Successful Career", priority: false, user_id: null }
+    { value: "Successful Career", priority: false, user_id: null },
+    { value: "Discovering", priority: false, user_id: null },{ value: "Friends", priority: false, user_id: null }, 
+    { value: "Health", priority: false, user_id: null }
   ];
 
   return (

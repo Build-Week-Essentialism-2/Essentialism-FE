@@ -17,7 +17,7 @@
     border-radius: 10px;  
 }
 
-form{
+.form-login{
     
     display: flex; 
     flex-direction: column; 
@@ -30,7 +30,7 @@ form{
     font-size: 2rem; 
 }
 
-button{
+.login-button{
     background: #acc1d2;
     text-decoration: none; 
     border: none; 

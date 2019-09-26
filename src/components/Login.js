@@ -31,7 +31,7 @@ const Login = props => {
   return (
     <div className="login-div">
       <section className="form">
-        <form onSubmit={login}>
+        <form className="form-login" onSubmit={login}>
           <h1 className="form-title">Username:</h1>
           <input
             type="text"
@@ -46,7 +46,7 @@ const Login = props => {
             value={credentials.password}
             onChange={handleChange}
           />
-          <button>Log In</button>
+          <button className="login-button">Log In</button>
         </form>
       </section>
     </div>
