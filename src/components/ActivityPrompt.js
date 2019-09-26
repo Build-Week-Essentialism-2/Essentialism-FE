@@ -125,7 +125,7 @@ const FormikActivityForm= withFormik({
         .then((res) => {
             console.log(res)            
             // setStatus(res)
-            return <Redirect to={`/compare/`} />
+            props.props.history.push("/compare/:id")
         })
         .catch(err => console.log(err.res))
         
