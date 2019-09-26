@@ -30,7 +30,7 @@ const SignUp = props => {
   return (
     <div className="signup-div">
       <section className="form">
-      <form onSubmit={register}>
+      <form className="form-signup" onSubmit={register}>
       <h1 className="form-title">Username:</h1>
         <input
           type="text"
@@ -52,7 +52,7 @@ const SignUp = props => {
           value={credentials.password}
           onChange={handleChange}
         />
-        <button>Sign Up</button>
+        <button className="signup-button">Sign Up</button>
       </form>
       </section>
     </div>
