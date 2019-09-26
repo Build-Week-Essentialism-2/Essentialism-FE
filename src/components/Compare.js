@@ -28,11 +28,13 @@ const Compare = (props) => {
 
     return (
         
-        <div className="compare-page">
-        
+        <div className="compare">
+        <div className="title-container">
         <h3 className="compare-title">
             Compare your values and your current projects. Are they aligned? What can you change in order to create more projects that are in line with your values?
         </h3>
+        </div>
+        <div className="compare-page">
 
         <div className="values">
             {values && values.map( item =>
@@ -51,10 +53,8 @@ const Compare = (props) => {
                     </div>
                 ))}
 
-
-
         </div>
-        
+        </div>        
         </div>
 
     )

@@ -1,4 +1,9 @@
+.compare{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
 .compare-page{
+    font-family: 'Open Sans Condensed', sans-serif;
     margin:5vh;
     display:flex;
     /* flex-direction: column; */
@@ -33,5 +38,16 @@
 
 .project{
     padding:3vh;
-    font-size:1.5rem;
+    font-size:1.2rem;
 }
+
+.compare-title{
+    margin: 4vh;
+    font-size: 1.6rem;
+    text-align:center;
+}
+
+.title-container{
+    margin:5vh;
+}
+
