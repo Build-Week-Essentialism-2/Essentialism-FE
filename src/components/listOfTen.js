@@ -101,7 +101,7 @@ const ListOfTen = (props) => {
         font-size: 1.5rem;
     `
 
-    ///////////////////////////////////Component that is displayed////////////////////////////////////////////
+    ///////////////////////////////////Displayed Component////////////////////////////////////////////
     return (
         <TopTenContainer>
             <TenTitle>Your Top Ten Choices</TenTitle>
