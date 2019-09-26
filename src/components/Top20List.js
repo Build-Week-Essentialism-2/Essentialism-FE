@@ -7,19 +7,26 @@ function Top20List(props) {
   const [top10, setTop10] = useState([]);
 
   const addTop10 = event => {
-
+    if (top10.length >= 10){
+      alert('You may only select three')
+    } else {
     const newEntry = event.target.value;
     
     const selected = initialState.filter((info) => {
       return newEntry === info.value
     })
+  
     // console.log(selected);
     const newList = top10.concat(selected);
     setTop10(newList);
   }
+  }
 
   const resetItems = (event) => {
     event.preventDefault()
+    top10.forEach(item => {
+      item.priority = false
+    })
     setTop10([])
 };
 
