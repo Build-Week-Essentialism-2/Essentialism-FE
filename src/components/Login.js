@@ -23,7 +23,7 @@ const Login = props => {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user_id", res.data.user_id);
         console.log(res.data);
-        props.history.push("/listoften");
+        props.history.push("/allvalues");
       })
       .catch(err => console.log(err));
   };

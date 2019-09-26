@@ -2,9 +2,9 @@ import React, {useState, useEffect} from "react"
 import {withFormik, Form, Field } from "formik"
 import * as Yup from "yup"
 import {axiosWithAuth} from "../utils/axiosWithAuth"
-import {Link} from "react-router-dom"
+import {Link, Redirect} from "react-router-dom"
 
-const ActivityForm = ({values, status, touched, errors}) => {
+const ActivityForm = ( {values, status, touched, errors}) => {
     // const [projects, setProject] = useState([])
 // console.log(status)
 // console.log(values)
@@ -101,7 +101,7 @@ const FormikActivityForm= withFormik({
 
     }),
 
-    handleSubmit(values, {setStatus, resetForm}) {
+    handleSubmit(values, props) {
         console.log("THIS IS FROM HANDLE SUBMIT")
        const payload = [{
             task_name:values.project1,
@@ -116,13 +116,16 @@ const FormikActivityForm= withFormik({
             user_id:values.user_id,
         }
         ]
+        console.log(props.props.match.params)
+        const user_id = props.props.match.params.id
+        
         // resetForm('');
         axiosWithAuth()
-        .post('/api/tasks', payload)
+        .post(`/api/tasks/`, payload)
         .then((res) => {
             console.log(res)            
             // setStatus(res)
-            // props.history.push("/compare");
+            return <Redirect to={`/compare/`} />
         })
         .catch(err => console.log(err.res))
         

@@ -13,11 +13,13 @@ const Compare = (props) => {
         return data.priority === true
 
     })
+    const user_id = props.match.params.id
     
     useEffect(()=>{
         axiosWithAuth()
-        .get('/api/tasks/')
+        .get(`/api/tasks/`)
         .then (res => {
+            console.log(res)
             setTasks(res.data)
         })
         .catch(error => console.log(error, "ERROR"))
@@ -26,18 +28,17 @@ const Compare = (props) => {
     return (
         <div className="compare-page">
         <div className="values">
-            {values.map( item =>
+            {values && values.map( item =>
                 <div className="value">
                 <ActivityButton  name={item.value} value={item.value}>{item.value}</ActivityButton>
                 </div>
                 )}
         </div>
         <div className="projects">
-        {tasks.map(task => (
+        {tasks && tasks.map(task => (
                     <ul key={task.name} className="project-list">
-                        <li>{task.project1}</li>
-                        <li>{task.project2}</li>
-                        <li>{task.project3}</li>                        
+                        <li>{task.task_name}</li>
+                                                
                         
                     </ul>
                 ))}
