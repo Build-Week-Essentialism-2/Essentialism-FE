@@ -15,7 +15,7 @@ import "./styles/Top20.css";
 import Compare from "./components/Compare";
 import "./styles/compare.css"
 
-function App() {
+function App(props) {
   const data = [
     { value: "Athleticism", priority: false, user_id: null },
     { value: "Art", priority: false, user_id: null },
@@ -34,7 +34,8 @@ function App() {
     { value: "Relationships", priority: false, user_id: null },
     { value: "Humor", priority: false, user_id: null },
     { value: "Successful Career", priority: false, user_id: null },
-    { value: "Discovering", priority: false, user_id: null },{ value: "Friends", priority: false, user_id: null }, 
+    { value: "Discovering", priority: false, user_id: null },
+    { value: "Friends", priority: false, user_id: null }, 
     { value: "Health", priority: false, user_id: null }
   ];
 
@@ -44,11 +45,11 @@ function App() {
       <Route exact path="/" render={props => <LandingPage data={data} />} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={SignUp} />
-      <Route path="/allvalues" render={props => <Top20List data={data} />} />
-      <Route path="/listoften" render={props => <ListOfTen data={data} />} />
-      <Route path="/top3" render={props => <Top3 data={data} />} />
-      <Route path="/projects" component={FormikActivityForm} />
-      <Route path="/compare" render={props => <Compare data={data} />} />
+      <Route path="/allvalues" render={props => <Top20List {...props} data={data}  />} />
+      <Route path="/listoften" render={props => <ListOfTen {...props} data={data} />} />
+      <Route path="/top3" render={props => <Top3 {...props} data={data} />} />
+      <Route path="/projects/" render={props => <FormikActivityForm {...props} data={data} />} />
+      <Route path="/compare/:id" render={props => <Compare {...props} data={data} />} />
     </div>
   );
 }

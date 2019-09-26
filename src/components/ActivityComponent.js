@@ -5,7 +5,7 @@ class ActivityButton extends React.Component {
   render() {
     return (
       <div>
-        <Button className="button">{this.props.name}</Button>
+        <Button className="value-button">{this.props.name}</Button>
                 
       </div>
     );

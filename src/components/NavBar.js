@@ -12,6 +12,8 @@ export default function NavBar(props) {
 
 
 
+  
+  
     return (
       <div>
         <ul className="navbar">
@@ -28,10 +30,10 @@ export default function NavBar(props) {
           <NavLink to="/top3" activeClassName="activeNavButton">My Values</NavLink>
           </li>
           <li>
-          <NavLink to="/projects" activeClassName="activeNavButton">Current Projects</NavLink>
+          <NavLink to="/projects/" activeClassName="activeNavButton">Current Projects</NavLink>
           </li>
           <li>
-          <NavLink to="/compare" activeClassName="activeNavButton">Compare</NavLink></li>
+          <NavLink to={`/compare/:id`} activeClassName="activeNavButton">Compare</NavLink></li>
           <li>
           <NavLink to="/" onClick={signOut} activeClassName="activeNavButton">Sign Out</NavLink>
           </li>
