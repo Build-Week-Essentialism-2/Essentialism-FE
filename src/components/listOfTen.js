@@ -58,8 +58,9 @@ const ListOfTen = (props) => {
     const TopTenButton = styled.button`
         background: #445FE8;
         color: white; 
-        border: 0px solid turquoise;
+        border: none;
         padding: 15px;
+        width: 180px;
         margin: 20px;
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.2rem;
