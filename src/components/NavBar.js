@@ -2,6 +2,16 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 export default function NavBar(props) {
+
+
+  const signOut = e => {
+    localStorage.removeItem('token')
+    localStorage.removeItem('user_id')
+    props.history.push("/");
+  };
+
+
+
   
   
     return (
@@ -25,7 +35,7 @@ export default function NavBar(props) {
           <li>
           <NavLink to={`/compare/:id`} activeClassName="activeNavButton">Compare</NavLink></li>
           <li>
-          <NavLink to="/" activeClassName="activeNavButton">Sign Out</NavLink>
+          <NavLink to="/" onClick={signOut} activeClassName="activeNavButton">Sign Out</NavLink>
           </li>
         </ul>
       </div> 

@@ -41,8 +41,8 @@ function App(props) {
 
   return (
     <div>
-      <Route match path="/" component={NavBar} {...props}/>
-      <Route exact path="/" render={props => <LandingPage {...props} data={data} />} />
+      <Route path="/" render={props => <NavBar {...props} />} />
+      <Route exact path="/" render={props => <LandingPage data={data} />} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={SignUp} />
       <Route path="/allvalues" render={props => <Top20List {...props} data={data}  />} />
