@@ -34,7 +34,8 @@ function App(props) {
     { value: "Relationships", priority: false, user_id: null },
     { value: "Humor", priority: false, user_id: null },
     { value: "Successful Career", priority: false, user_id: null },
-    { value: "Discovering", priority: false, user_id: null },{ value: "Friends", priority: false, user_id: null }, 
+    { value: "Discovering", priority: false, user_id: null },
+    { value: "Friends", priority: false, user_id: null }, 
     { value: "Health", priority: false, user_id: null }
   ];
 
