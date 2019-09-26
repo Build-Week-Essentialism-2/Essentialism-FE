@@ -56,15 +56,21 @@ const ListOfTen = (props) => {
 
     ///////////////////////////////////////////Styling////////////////////////////////////////////////
     const TopTenButton = styled.button`
-        background: #445FE8;
+        background: #1C7980;
         color: white; 
         border: none;
         padding: 15px;
         width: 180px;
+        height: 70px;
         margin: 20px;
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 1.2rem;
         border-radius: 5%; 
+        transition: .5s;
+        &:hover{
+            width: 195px;
+            height: 80px;
+        }
         ${props => (props.className === 'reset-button' ? `background: #B91010;` : null)}
         ${props => (props.className === 'next-button' ? `background: #2C5293;`: null)}
     `
