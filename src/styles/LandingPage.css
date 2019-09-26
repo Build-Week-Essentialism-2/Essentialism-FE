@@ -16,6 +16,7 @@ header {
 }
 
 .signup-nav{
+    color: white;
     background: #1c7980;
     text-decoration: none; 
     border: none; 
@@ -91,4 +92,7 @@ header {
 
 .body-testimonial p {
     font-size: 2rem; 
+}
+.signup-body{
+    color: white;
 }
