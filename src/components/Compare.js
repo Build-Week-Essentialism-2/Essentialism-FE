@@ -13,7 +13,7 @@ const Compare = (props) => {
         return data.priority === true
 
     })
-    const user_id = props.match.params.id
+    const user_id = localStorage.getItem('user_id')
     console.log(props)
     
     useEffect(()=>{
@@ -25,6 +25,17 @@ const Compare = (props) => {
         })
         .catch(error => console.log(error, "ERROR"))
     }, [])
+
+    const reset = () => {
+        axiosWithAuth()
+        .delete(`/api/tasks/${user_id}`)
+        .then (res => {
+            console.log(res)
+            setTasks(null)
+        })
+        .catch(error => console.log(error, "ERROR"))
+    }
+
 
     return (
         
@@ -54,7 +65,10 @@ const Compare = (props) => {
                 ))}
 
         </div>
-        </div>        
+        </div>  
+        <button onClick={reset} className="reset">
+        Reset Tasks
+        </button>      
         </div>
 
     )
