@@ -14,12 +14,22 @@ const Compare = (props) => {
 
     })
     
+    useEffect(()=>{
+        axiosWithAuth()
+        .get('/api/tasks/')
+        .then (res => {
+            setTasks(res.data)
+        })
+        .catch(error => console.log(error, "ERROR"))
+    }, [])
 
     return (
         <div className="compare-page">
         <div className="values">
             {values.map( item =>
-                <ActivityButton name={item.value} value={item.value}>{item.value}</ActivityButton>
+                <div className="value">
+                <ActivityButton  name={item.value} value={item.value}>{item.value}</ActivityButton>
+                </div>
                 )}
         </div>
         <div className="projects">

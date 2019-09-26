@@ -13,6 +13,7 @@ import NavBar from "./components/NavBar";
 import Top20List from "./components/Top20List";
 import "./styles/Top20.css";
 import Compare from "./components/Compare";
+import "./styles/compare.css"
 
 function App() {
   const data = [
