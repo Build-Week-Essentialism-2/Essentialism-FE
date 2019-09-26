@@ -30,6 +30,7 @@ const SignUp = props => {
   return (
     <div className="signup-div">
       <section className="form">
+      <h1 className="sign-up-header">Sign up</h1>  
       <form className="form-signup" onSubmit={register}>
       <h1 className="form-title">Username:</h1>
         <input

@@ -31,7 +31,9 @@ const Login = props => {
   return (
     <div className="login-div">
       <section className="form">
+      <h1 className='login-header'>Log in</h1>
         <form className="form-login" onSubmit={login}>
+         
           <h1 className="form-title">Username:</h1>
           <input
             type="text"
