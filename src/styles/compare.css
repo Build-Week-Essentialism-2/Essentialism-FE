@@ -1,8 +1,16 @@
+.compare{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
 .compare-page{
+    font-family: 'Open Sans Condensed', sans-serif;
     margin:5vh;
     display:flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-content: space-around;
+    flex-wrap:wrap;
+    justify-content: center;
+
 }
 
 .values{
@@ -18,3 +26,28 @@
     padding:5vh;
     
 }
+
+.projects{
+    padding: 5vh;
+    margin:5vh;
+    width:30%;
+    display:flex;
+    flex-direction:column;
+    align-content: space-around;
+}
+
+.project{
+    padding:3vh;
+    font-size:1.2rem;
+}
+
+.compare-title{
+    margin: 4vh;
+    font-size: 1.6rem;
+    text-align:center;
+}
+
+.title-container{
+    margin:5vh;
+}
+
