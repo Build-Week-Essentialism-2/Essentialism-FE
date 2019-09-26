@@ -34,14 +34,15 @@ function App(props) {
     { value: "Relationships", priority: false, user_id: null },
     { value: "Humor", priority: false, user_id: null },
     { value: "Successful Career", priority: false, user_id: null },
-    { value: "Discovering", priority: false, user_id: null },{ value: "Friends", priority: false, user_id: null }, 
+    { value: "Discovering", priority: false, user_id: null },
+    { value: "Friends", priority: false, user_id: null }, 
     { value: "Health", priority: false, user_id: null }
   ];
 
   return (
     <div>
-      <Route match path="/" component={NavBar} {...props}/>
-      <Route exact path="/" render={props => <LandingPage {...props} data={data} />} />
+      <Route path="/" render={props => <NavBar {...props} />} />
+      <Route exact path="/" render={props => <LandingPage data={data} />} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={SignUp} />
       <Route path="/allvalues" render={props => <Top20List {...props} data={data}  />} />

@@ -1,13 +1,4 @@
 import React from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  Jumbotron,
-  Button
-} from "reactstrap";
 import { NavLink } from "react-router-dom";
 import "../styles/LandingPage.css";
 
