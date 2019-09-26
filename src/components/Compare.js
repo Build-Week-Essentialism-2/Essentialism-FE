@@ -14,10 +14,11 @@ const Compare = (props) => {
 
     })
     const user_id = props.match.params.id
+    console.log(props)
     
     useEffect(()=>{
         axiosWithAuth()
-        .get(`/api/tasks/`)
+        .get(`/api/tasks/${user_id}`)
         .then (res => {
             console.log(res)
             setTasks(res.data)

@@ -116,8 +116,8 @@ const FormikActivityForm= withFormik({
             user_id:values.user_id,
         }
         ]
-        console.log(props.props.match.params)
-        const user_id = props.props.match.params.id
+        console.log(props)
+        // const user_id = props.props.match.params.id
         
         // resetForm('');
         axiosWithAuth()

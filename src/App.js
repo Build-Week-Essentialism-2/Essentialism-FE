@@ -48,7 +48,7 @@ function App(props) {
       <Route path="/listoften" render={props => <ListOfTen {...props} data={data} />} />
       <Route path="/top3" render={props => <Top3 {...props} data={data} />} />
       <Route path="/projects/" render={props => <FormikActivityForm {...props} data={data} />} />
-      <Route path="/compare/" render={props => <Compare {...props} data={data} />} />
+      <Route path="/compare/:id" render={props => <Compare {...props} data={data} />} />
     </div>
   );
 }
