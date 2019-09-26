@@ -37,7 +37,7 @@ function Top20List(props) {
       <div className="jayne-display">
         {
           initialState.map((info) => (
-            <div>
+            <div key={info.value}>
               <button className="jayne-buttons" key={info.value} value={info.value} onClick={addTop10}>{info.value}</button>
             </div>
           ))
