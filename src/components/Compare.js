@@ -31,7 +31,7 @@ const Compare = (props) => {
         .delete(`/api/tasks/${user_id}`)
         .then (res => {
             console.log(res)
-            setTasks(res.data)
+            setTasks(null)
         })
         .catch(error => console.log(error, "ERROR"))
     }
