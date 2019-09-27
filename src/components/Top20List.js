@@ -100,9 +100,9 @@ function Top20List(props) {
           : <p>Pick up to 10 buttons</p>
         }
       </div >
-      <div className="jayne-tasks" onClick={resetItems}>Reset Choices</div>
+      <div className="jayne-reset" onClick={resetItems}>Reset Choices</div>
       <div className="jayne-next-div">
-        <Link to="/listoften" className="jayne-tasks">Next</Link>
+        <Link to="/listoften" className="jayne-next">Next</Link>
       </div>
       
     </div>
