@@ -1,5 +1,38 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
+import { Motion, spring } from 'react-motion';
+import styled from 'styled-components';
+
+// CODE FOR REACT-MOTION AND STYLED COMPONENTS//
+const AnimatedCard = props => {
+  return (
+    <Motion
+      defaultStyle={{ scale: .5 }}
+      style={{ scale: spring(1, { stiffness: 40, damping: 10 }) }}
+    >
+      {interpolatedStyle => <Card scale={interpolatedStyle.scale} {...props} />}
+    </Motion>
+  );
+};
+const CardWrapper = styled.h1`
+  /* background: lightblue; */
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transform: ${props => `scale(${props.scale})`};
+`;
+class Card extends React.Component {
+  render() {
+    const { scale } = this.props;
+    return (
+      <CardWrapper scale={scale}>
+        <h1>Essentialism</h1>
+      </CardWrapper>
+    );
+  }
+}
+/////////END OF REACT MOTION CODE//////////
 
 function Top20List(props) {
 
@@ -38,7 +71,7 @@ function Top20List(props) {
 
   return (
     <div className="return-div">
-      <h1>Essentialism</h1>
+      <AnimatedCard/>
       <h2>Which activities are important to you?</h2>
       <h3>Select your Top Ten</h3>
       <div className="jayne-display">
