@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import { Motion, spring } from 'react-motion';
 import styled from 'styled-components';
 
-// CODE FOR REACT-MOTION AND STYLED COMPONENTS//
+///// CODE FOR REACT-MOTION AND STYLED COMPONENTS/////
 const AnimatedCard = props => {
   return (
     <Motion
@@ -15,9 +15,12 @@ const AnimatedCard = props => {
   );
 };
 const CardWrapper = styled.h1`
-  /* background: lightblue; */
-  max-width: 500px;
-  margin: 2rem auto;
+  align-items: center;
+  display: flex;
+  jusify-content: center;
+  max-width: 200px;
+  height: 60px;
+  margin: 0 auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   transform: ${props => `scale(${props.scale})`};
@@ -100,9 +103,9 @@ function Top20List(props) {
           : <p>Pick up to 10 buttons</p>
         }
       </div >
-      <div className="jayne-buttons" onClick={resetItems}>Reset Choices</div>
+      <div className="jayne-reset" onClick={resetItems}>Reset Choices</div>
       <div className="jayne-next-div">
-        <Link to="/listoften" className="jayne-buttons">Next</Link>
+        <Link to="/listoften" className="jayne-next">Next</Link>
       </div>
       
     </div>

@@ -26,6 +26,13 @@
   margin: 10px;
   text-decoration: none;
   max-width: 800px;
+  border: none;
+  padding: 15px;
+  width: 180px;
+  height: 70px;
+  margin: 20px;
+  font-size: 1.2rem;
+  border-radius: 5%; 
 }
 
 .jayne-selections{
@@ -53,4 +60,28 @@
   padding:5px 10px;
   margin: 10px;
   text-decoration: none;
+}
+
+.jayne-next{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:1.4rem;
+  color: #E2E8E8;
+  background-color: #2C5293;
+  border-radius: 5%;
+  padding:5px 10px;
+  margin: 10px;
+  text-decoration: none;
+  max-width: 800px;
+}
+
+.jayne-reset{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:1.4rem;
+  color: #E2E8E8;
+  background-color: #B91010;
+  border-radius: 5%;
+  padding:5px 10px;
+  margin: 10px;
+  text-decoration: none;
+  max-width: 800px;
 }
