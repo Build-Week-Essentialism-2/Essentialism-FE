@@ -15,7 +15,6 @@
 
 .values{
     padding:5vh;
-    margin: 5vh;
     display:flex;
     flex-direction: column;
     align-content: space-around;
