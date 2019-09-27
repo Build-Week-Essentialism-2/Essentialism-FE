@@ -8,7 +8,7 @@ function Top20List(props) {
 
   const addTop10 = event => {
     if (top10.length >= 10){
-      alert('You may only select three')
+      alert('You may only select ten')
     } else {
     const newEntry = event.target.value;
     
