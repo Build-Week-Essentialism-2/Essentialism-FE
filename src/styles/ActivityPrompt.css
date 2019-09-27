@@ -1,6 +1,7 @@
 .form-container{
     display:flex;
     justify-content: center;
+    align-content: center;
 }
 
 .project-title{
@@ -53,4 +54,12 @@ li{
 
 .error{
     color:red;
+}
+.submit-button{
+    background-color: #ACC1D2;
+    font-size: 1.25rem;
+    padding:10px 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 3vh;
+    
 }

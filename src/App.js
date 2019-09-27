@@ -14,6 +14,7 @@ import Top20List from "./components/Top20List";
 import "./styles/Top20.css";
 import Compare from "./components/Compare";
 import "./styles/compare.css"
+import PrivateRoute from './components/PrivateRoute'
 
 function App(props) {
   const data = [
@@ -48,10 +49,13 @@ function App(props) {
       <Route path="/allvalues" render={props => <Top20List {...props} data={data}  />} />
       <Route path="/listoften" render={props => <ListOfTen {...props} data={data} />} />
       <Route path="/top3" render={props => <Top3 {...props} data={data} />} />
-      <Route path="/projects/" render={props => <FormikActivityForm {...props} data={data} />} />
-      <Route path="/compare/:id" render={props => <Compare {...props} data={data} />} />
+      <PrivateRoute exact path="/projects" component={FormikActivityForm} {...props}/>
+      <PrivateRoute exact path="/compare/:id" component={Compare} {...props} data={data}/>
     </div>
   );
 }
 
 export default App;
+// render={props => <FormikActivityForm {...props} data={data} />
+
+// render={props => <Compare {...props} data={data} />}
